@@ -1,0 +1,122 @@
+package com.sundogsoftware.spark
+
+// バージョン環境
+// Spark: 2.4
+// Scala: 2.11
+// Scala IDE: 4.7.0
+// JDK: JDK8
+
+//　Sparkの基本ライブラリ
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.spark.sql._
+import org.apache.log4j._
+//　GraphXに使用するライブラリ
+import org.apache.spark.rdd.RDD
+import org.apache.spark.graphx._
+
+/** Marvelヒーローのデータセットを使ったグラフ処理 */
+object GraphX {
+  
+  /**  (ヒーローID　-> ヒーロー名)のタプルを抽出する関数　*/
+  def parseNames(line: String) : Option[(VertexId, String)] = {
+    var fields = line.split('\"')
+    if (fields.length > 1) {
+      val heroID:Long = fields(0).trim().toLong
+      if (heroID < 6487) {  // 存在しないヒーローID 6487以降を除外するif文
+        return Some( fields(0).trim().toLong, fields(1))
+      }
+    } 
+  
+    return None // flatmapはNone(値が存在しない)を無視して、Someオブジェクト(値がある部分)だけを抽出して使用する
+  }
+  
+  
+  /** Transform an input line from marvel-graph.txt into a List of Edges */
+  /** (基準ヒーローID, 繋がっているヒーローID, ... , 繋がっているヒーローID, 0)のタプルをリスト化 */
+  def makeEdges(line: String) : List[Edge[Int]] = {
+    import scala.collection.mutable.ListBuffer
+    var edges = new ListBuffer[Edge[Int]]() // ListBufferはListの可変特化型 EdgeはIntで構成
+    val fields = line.split(" ")
+    val origin = fields(0)
+    for (x <- 1 to (fields.length - 1)) {
+      // Our attribute field is unused, but in other graphs could
+      // be used to deep track of physical distances etc.
+      edges += Edge(origin.toLong, fields(x).toLong, 0)
+    }
+    
+    return edges.toList
+  }
+  
+  /** main関数　実行時に走る部分 */
+  def main(args: Array[String]) { 
+    
+    // logレベルの設定：print errorsのみ表示
+    Logger.getLogger("org").setLevel(Level.ERROR)
+    
+    // SparkContext はPCの全コアを使用
+    val sc = new SparkContext("local[*]", "GraphX")
+    
+     // vertices(頂点)を作成
+    val names = sc.textFile("../marvel-names.txt")
+    val verts = names.flatMap(parseNames) // marvel-namesのデータに対してそれぞれparseNamesでmap処理
+    
+    // edges(辺)を作成
+    val lines = sc.textFile("../marvel-graph.txt")
+    val edges = lines.flatMap(makeEdges) // marvel-graphのデータに対してそれぞれmakeEdgesでmap処理
+    
+    // グラフを構築、何度も使うためcacheしておく
+    val default = "Nobody"
+    val graph = Graph(verts, edges, default).cache()
+    
+    // 最も多くのヒーローと繋がっている(共演した)ヒーローをグラフ処理で求めてみる
+    println("\nTop 10 most-connected superheroes:")
+    // The join merges the hero names into the output; sorts by total connections on each node.
+    // graph.degreesでvertsに繋がっているedgesの数をそれぞれ数えて、RDDで返す
+    // join(verts)でvertsIDの代わりにヒーロー名を持ってくる
+    // sortはコネクション数をもとに降順で頭から10個を持ってきてforeachでそれぞれprintln   
+    graph.degrees.join(verts).sortBy(_._2._1, ascending=false).take(10).foreach(println)
+
+
+    // Now let's do Breadth-First Search using the Pregel API
+    println("\nComputing degrees of separation from SpiderMan...")
+    
+    // Start from SpiderMan
+    val root: VertexId = 5306 // SpiderMan
+    
+    // Initialize each node with a distance of infinity, unless it's our starting point
+    val initialGraph = graph.mapVertices((id, _) => if (id == root) 0.0 else Double.PositiveInfinity)
+
+    // Now the Pregel magic
+    val bfs = initialGraph.pregel(Double.PositiveInfinity, 10)( 
+        // Our "vertex program" preserves the shortest distance
+        // between an inbound message and its current value.
+        // It receives the vertex ID we are operating on,
+        // the attribute already stored with the vertex, and
+        // the inbound message from this iteration.
+        (id, attr, msg) => math.min(attr, msg), 
+        
+        // Our "send message" function propagates out to all neighbors
+        // with the distance incremented by one.
+        triplet => { 
+          if (triplet.srcAttr != Double.PositiveInfinity) { 
+            Iterator((triplet.dstId, triplet.srcAttr+1)) 
+          } else { 
+            Iterator.empty 
+          } 
+        }, 
+        
+        // The "reduce" operation preserves the minimum
+        // of messages received by a vertex if multiple
+        // messages are received by one vertex
+        (a,b) => math.min(a,b) ).cache()
+    
+    // Print out the first 100 results:
+    bfs.vertices.join(verts).take(100).foreach(println)
+    
+    // Recreate our "degrees of separation" result:
+    println("\n\nDegrees from SpiderMan to ADAM 3,031")  // ADAM 3031 is hero ID 14
+    bfs.vertices.filter(x => x._1 == 14).collect.foreach(println)
+    
+  }
+}

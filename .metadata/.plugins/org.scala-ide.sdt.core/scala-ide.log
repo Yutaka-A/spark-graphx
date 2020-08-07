@@ -1,0 +1,158 @@
+2020-08-06 11:27:27,335  WARN [ModalContext] - ScalaProject - Project SparkScalaCourse has platform default sourceLevel.
+2020-08-06 11:27:27,339  WARN [ModalContext] - ScalaProject - Project SparkScalaCourse runs on platform default installation.
+2020-08-06 11:27:27,876  WARN [Worker-0] - ScalaProject - Project SparkScalaCourse has platform default sourceLevel.
+2020-08-06 11:27:27,877  WARN [Worker-0] - ScalaProject - Project SparkScalaCourse runs on platform default installation.
+2020-08-06 11:28:05,787  WARN [Worker-8] - ScalaProject - Project SparkScalaCourse has platform default sourceLevel.
+2020-08-06 11:28:05,788  WARN [Worker-8] - ScalaProject - Project SparkScalaCourse runs on platform default installation.
+2020-08-06 11:28:49,352  WARN [Worker-2] - ScalaProject - Project SparkScalaCourse has platform default sourceLevel.
+2020-08-06 11:28:49,352  WARN [Worker-2] - ScalaProject - Project SparkScalaCourse runs on platform default installation.
+2020-08-06 11:28:49,935  WARN [Java indexing] - ScalaProject - Project SparkScalaCourse has platform default sourceLevel.
+2020-08-06 11:28:49,935  WARN [Java indexing] - ScalaProject - Project SparkScalaCourse runs on platform default installation.
+2020-08-06 11:30:00,132  WARN [Worker-7] - ScalaProject - Project SparkScalaCourse has platform default sourceLevel.
+2020-08-06 11:30:00,132  WARN [Worker-7] - ScalaProject - Project SparkScalaCourse runs on platform default installation.
+2020-08-06 11:31:13,933  WARN [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Preference scala.compiler.sourceLevel was uninitialized for SparkScalaCourse, setting default to 2.12.
+2020-08-06 13:13:17,541 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:13:17,542 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:13:17,542 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:15:00,603 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:15:00,604 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:20:46,917 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:20:46,918 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:20:46,918 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:39:01,456 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:39:01,456 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:39:01,456 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:39:53,260 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:39:53,261 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:39:53,261 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:40:33,774 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:40:33,775 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:40:33,775 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:41:08,472 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:41:08,472 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 13:41:08,473 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 15:53:24,486 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 15:53:24,486 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 15:53:24,486 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 15:54:27,530 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 15:54:27,530 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 15:54:27,530 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 16:35:13,122 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 16:35:13,122 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 16:35:13,122 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 16:36:31,417 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 16:36:31,417 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-06 16:36:31,417 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2020-08-07 09:00:56,528 ERROR [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 2 - Problems occurred when invoking code from plug-in: "org.scala-ide.sdt.core".
+java.lang.StringIndexOutOfBoundsException: String index out of range: 3892
+	at java.lang.String.<init>(Unknown Source)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$.org$scalaide$ui$internal$editor$decorators$implicits$ImplicitHighlightingPresenter$$mkImplicitConversionAnnotation$1(ImplicitHighlightingPresenter.scala:55)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:91)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:87)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1305)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1341)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1211)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:98)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:87)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1291)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1341)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1211)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:98)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:87)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1294)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1341)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1211)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:98)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:87)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseTrees$1(Trees.scala:2484)
+	at scala.reflect.api.Trees$Traverser.traverseTrees(Trees.scala:2484)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1245)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1341)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1211)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:98)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:87)
+	at scala.reflect.internal.Trees.$anonfun$itraverse$1(Trees.scala:1226)
+	at scala.reflect.api.Trees$Traverser.atOwner(Trees.scala:2507)
+	at scala.reflect.internal.Trees.traverseMemberDef$1(Trees.scala:1214)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1339)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1211)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:98)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:87)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseStats$2(Trees.scala:2498)
+	at scala.reflect.api.Trees$Traverser.atOwner(Trees.scala:2507)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseStats$1(Trees.scala:2498)
+	at scala.reflect.api.Trees$Traverser.traverseStats(Trees.scala:2497)
+	at scala.reflect.internal.Trees.traverseComponents$1(Trees.scala:1243)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1341)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1211)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:98)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:87)
+	at scala.reflect.internal.Trees.$anonfun$itraverse$1(Trees.scala:1219)
+	at scala.reflect.api.Trees$Traverser.atOwner(Trees.scala:2507)
+	at scala.reflect.internal.Trees.traverseMemberDef$1(Trees.scala:1214)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1338)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1211)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:98)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:87)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseStats$2(Trees.scala:2498)
+	at scala.reflect.api.Trees$Traverser.atOwner(Trees.scala:2507)
+	at scala.reflect.api.Trees$Traverser.$anonfun$traverseStats$1(Trees.scala:2498)
+	at scala.reflect.api.Trees$Traverser.traverseStats(Trees.scala:2497)
+	at scala.reflect.internal.Trees.itraverse(Trees.scala:1337)
+	at scala.reflect.internal.Trees.itraverse$(Trees.scala:1211)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.internal.SymbolTable.itraverse(SymbolTable.scala:16)
+	at scala.reflect.api.Trees$Traverser.traverse(Trees.scala:2475)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$$anon$1.traverse(ImplicitHighlightingPresenter.scala:98)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter$.findAllImplicitConversions(ImplicitHighlightingPresenter.scala:100)
+	at org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter.findAll(ImplicitHighlightingPresenter.scala:29)
+	at org.scalaide.ui.internal.editor.decorators.BaseSemanticAction.findAnnotations$1(BaseSemanticAction.scala:146)
+	at org.scalaide.ui.internal.editor.decorators.BaseSemanticAction.$anonfun$apply$1(BaseSemanticAction.scala:157)
+	at org.scalaide.ui.internal.editor.decorators.BaseSemanticAction.$anonfun$apply$1$adapted(BaseSemanticAction.scala:139)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.ui.internal.editor.decorators.BaseSemanticAction.apply(BaseSemanticAction.scala:139)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$3(ScalaSourceFileEditor.scala:105)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at org.scalaide.util.eclipse.EclipseUtils$$anon$3.run(EclipseUtils.scala:230)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.scalaide.util.eclipse.EclipseUtils$.withSafeRunner(EclipseUtils.scala:226)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$1(ScalaSourceFileEditor.scala:105)
+	at scala.collection.mutable.ArraySeq.foreach(ArraySeq.scala:74)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.reconciled(ScalaSourceFileEditor.scala:103)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5$adapted(ScalaSourceFileEditor.scala:478)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.reconciled(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor.reconciled(ScalaSourceFileEditor.scala:379)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2$adapted(ScalaReconcilingStrategy.scala:65)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.handleReconciliation(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.reconcile(ScalaReconcilingStrategy.scala:39)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:77)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:69)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+2020-08-07 09:00:56,990 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Error occurred while executing 'org.scalaide.ui.internal.editor.decorators.implicits.ImplicitHighlightingPresenter'. Check the previous stack trace for more information.

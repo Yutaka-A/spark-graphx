@@ -1,0 +1,124 @@
+package com.sundogsoftware.spark
+
+// バージョン環境
+// Spark: 2.4
+// Scala: 2.11
+// Scala IDE: 4.7.0
+// JDK: JDK8
+
+//　Sparkの基本ライブラリ
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.spark.sql._
+import org.apache.log4j._
+//　GraphXに使用するライブラリ
+import org.apache.spark.rdd.RDD
+import org.apache.spark.graphx._
+
+/** Marvelヒーローのデータセットを使ったグラフ処理 */
+object GraphX {
+  
+  /**  (ヒーローID　-> ヒーロー名)のタプルを抽出する関数　*/
+  def parseNames(line: String) : Option[(VertexId, String)] = {
+    var fields = line.split('\"')
+    if (fields.length > 1) {
+      val heroID:Long = fields(0).trim().toLong
+      if (heroID < 6487) {  // 存在しないヒーローID 6487以降を除外するif文
+        return Some( fields(0).trim().toLong, fields(1))
+      }
+    } 
+  
+    return None // flatmapはNone(値が存在しない)を無視して、Someオブジェクト(値がある部分)だけを抽出して使用する
+  }
+  
+  
+  /** (基準ヒーローID, 繋がっているヒーローID, ... , 繋がっているヒーローID, 0)のタプルをリスト化 */
+  def makeEdges(line: String) : List[Edge[Int]] = {
+    import scala.collection.mutable.ListBuffer
+    var edges = new ListBuffer[Edge[Int]]() // ListBufferはListの可変特化型 EdgeはIntで構成
+    val fields = line.split(" ")
+    val origin = fields(0)
+    for (x <- 1 to (fields.length - 1)) {
+      // Our attribute field is unused, but in other graphs could
+      // be used to deep track of physical distances etc.
+      edges += Edge(origin.toLong, fields(x).toLong, 0)
+    }
+    
+    return edges.toList
+  }
+  
+  
+  
+  /** main関数　実行時に走る部分 */
+  def main(args: Array[String]) { 
+    
+    // logレベルの設定：print errorsのみ表示
+    Logger.getLogger("org").setLevel(Level.ERROR)
+    
+    // SparkContext はPCの全コアを使用
+    val sc = new SparkContext("local[*]", "GraphX")
+    
+     // vertices(頂点)を作成
+    val names = sc.textFile("../marvel-names.txt")
+    val verts = names.flatMap(parseNames) // marvel-namesのデータに対してそれぞれparseNamesでmap処理
+    
+    // edges(辺)を作成
+    val lines = sc.textFile("../marvel-graph.txt")
+    val edges = lines.flatMap(makeEdges) // marvel-graphのデータに対してそれぞれmakeEdgesでmap処理
+    
+    // グラフを構築、何度も使うためcacheしておく
+    val default = "Nobody"
+    val graph = Graph(verts, edges, default).cache()
+    
+    
+    
+    
+    // 最も多くのヒーローと繋がっている(共演した)ヒーローをグラフ処理で求めてみる
+    println("\n最も多くのヒーローと繋がっている(共演した)ヒーロー　Top10")
+    // The join merges the hero names into the output; sorts by total connections on each node.
+    // graph.degreesでvertsに繋がっているedgesの数をそれぞれ数えて、RDDで返す
+    // join(verts)でvertsIDの代わりにヒーロー名を持ってくる
+    // sortはコネクション数をもとに降順で頭から10個を持ってきてforeachでそれぞれprintln   
+    graph.degrees.join(verts).sortBy(_._2._1, ascending=false).take(10).foreach(println)
+
+
+    
+    
+    // Breadth-First Search(幅優先探索)をPregel APIを使用して簡単に実装する
+    println("\nSpiderMan との距離を計算")
+    
+    // 例として、SpiderManを指定してスタート
+    val root: VertexId = 5306 // SpiderMan
+    
+    // 初期設定　root(Spiderman)のIDなら0.0、それ以外は距離無限を設定
+    val initialGraph = graph.mapVertices((id, _) => if (id == root) 0.0 else Double.PositiveInfinity)
+
+    // Pregelを使う
+    val bfs = initialGraph.pregel(Double.PositiveInfinity, 10)( // pregel(デフォルト値, 最大イテレーション数)
+        // 現在持っている距離と新しい距離の内、小さい方を保持する(最短距離)        
+        (id, attr, msg) => math.min(attr, msg), 
+        
+        // 隣のvertexには最短距離＋１の数値を送る　無限を持っている状態ならここでは何もしない
+        triplet => { 
+          if (triplet.srcAttr != Double.PositiveInfinity) { 
+            Iterator((triplet.dstId, triplet.srcAttr+1)) 
+          } else { 
+            Iterator.empty 
+          } 
+        }, 
+        
+        // 複数の数値が送られてきた場合は、最短距離を取る
+        (a,b) => math.min(a,b) ).cache()  // 一連のpregel処理をcacheして何度も繰り返すために保持する
+    
+    // 最初の100回分を表示
+    bfs.vertices.join(verts).take(100).foreach(println)
+    
+    
+    
+    
+    // 特定ID同士の距離を表示
+    println("\n\nSpiderMan と ADAM 3,031　の距離")
+    bfs.vertices.filter(x => x._1 == 14).collect.foreach(println)
+    
+  }
+}

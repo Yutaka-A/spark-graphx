@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="C:\Users\best_\Desktop\spark-graphx" version="1.8.0_261">
+<bootpath>
+<entry path="C:\Users\best_\Desktop\spark-graphx\jre\lib\resources.jar"/>
+<entry path="C:\Users\best_\Desktop\spark-graphx\jre\lib\rt.jar"/>
+<entry path="C:\Users\best_\Desktop\spark-graphx\jre\lib\sunrsasign.jar"/>
+<entry path="C:\Users\best_\Desktop\spark-graphx\jre\lib\jsse.jar"/>
+<entry path="C:\Users\best_\Desktop\spark-graphx\jre\lib\jce.jar"/>
+<entry path="C:\Users\best_\Desktop\spark-graphx\jre\lib\charsets.jar"/>
+<entry path="C:\Users\best_\Desktop\spark-graphx\jre\lib\jfr.jar"/>
+<entry path="C:\Users\best_\Desktop\spark-graphx\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Users\best_\Desktop\spark-graphx\jre\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Users\best_\Desktop\spark-graphx\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>
